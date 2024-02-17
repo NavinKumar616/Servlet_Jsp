@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+<servlet>
+	<servlet-name>abc</servlet-name>
+	<servlet-class>com.telusko.MyServlet</servlet-class>
+	
+	<!-- this below code will be use when we r using servlet config -->
+	<!-- if u have different value for different servlet go for servlet config -->
+	<init-param>
+		<param-name>name</param-name>
+		<param-value>rakesh</param-value>
+	</init-param>
+</servlet>
+<servlet-mapping>
+	<servlet-name>abc</servlet-name>
+	<url-pattern>/myservlet</url-pattern>
+</servlet-mapping>
+<!-- this below code will be shared by all the servlets ; use by servlet context-->
+<!-- if u have multiple servlets which will share the same value go for servlet context -->
+<context-param>
+	<param-name>name</param-name>
+	<param-value>navin</param-value>
+</context-param>
+
+<context-param>
+	<param-name>phone</param-name>
+	<param-value>samsung</param-value>
+</context-param>
+</web-app>
